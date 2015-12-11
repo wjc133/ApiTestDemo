@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd"
+       default-lazy-init="true">
+
+    <bean id="apiTestDataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url"
+                  value="jdbc:mysql://${study.jdbc.host}:${study.jdbc.port}/${study.jdbc.dbname}?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true"/>
+        <property name="username" value="${study.jdbc.username}"/>
+        <property name="password" value="${study.jdbc.password}"/>
+        <property name="maxTotal" value="100"/>
+        <property name="maxIdle" value="100"/>
+        <property name="maxWaitMillis" value="5000"/>
+        <property name="defaultAutoCommit" value="true"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="validationQuery" value="select 1"/>
+        <property name="timeBetweenEvictionRunsMillis" value="22000"/>
+        <property name="minEvictableIdleTimeMillis" value="20000"/>
+        <property name="numTestsPerEvictionRun" value="3"/>
+        <property name="removeAbandonedOnBorrow" value="true"/>
+        <property name="removeAbandonedOnMaintenance" value="true"/>
+        <property name="removeAbandonedTimeout" value="150"/>
+        <property name="logAbandoned" value="true"/>
+    </bean>
+
+    <bean id="apiTestSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="apiTestDataSource"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath*:sqlmappers/**/*Mapper.xml"/>
+        <property name="typeAliasesPackage" value="com.elite.api.dao.domain"/>
+    </bean>
+
+    <bean id="apiTestMapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.elite.api.dao.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="apiTestSqlSessionFactory"/>
+    </bean>
+</beans>
