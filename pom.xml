@@ -227,6 +227,32 @@
                     </httpConnector>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.5.3.201107060350</version>
+                <executions>
+                    <execution>
+                        <id>JaCoCo Agent</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>
+                                prepare-agent
+                            </goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>JaCoCo Report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>
+                                report
+                            </goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
