@@ -8,7 +8,7 @@ import java.util.Date;
  * Date: 2015/12/11
  * Time: 14:48
  */
-public class News implements Serializable {
+public class News {
     private Long id;
     private String title;
     private String content;

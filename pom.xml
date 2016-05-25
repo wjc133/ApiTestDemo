@@ -57,11 +57,6 @@
             <artifactId>spring-beans</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.13</version>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -226,32 +221,6 @@
                         <idleTimeout>60000</idleTimeout>
                     </httpConnector>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.5.3.201107060350</version>
-                <executions>
-                    <execution>
-                        <id>JaCoCo Agent</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>
-                                prepare-agent
-                            </goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>JaCoCo Report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>
-                                report
-                            </goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
