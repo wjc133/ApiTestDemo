@@ -26,5 +26,5 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     <import resource="classpath:/application-context-mybatis.xml"/>
-
+    <import resource="application-people.xml"/>
 </beans>
