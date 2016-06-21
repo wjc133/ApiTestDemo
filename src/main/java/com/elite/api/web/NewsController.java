@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * Created by wjc133
  * Date: 2015/12/11
@@ -30,5 +32,15 @@ public class NewsController {
             throw new ApiException("id can't be null");
         }
         return newsService.queryById(id);
+    }
+
+    @RequestMapping(value = "lala/**")
+    @ResponseBody
+    public String lala(HttpServletRequest request) {
+        String path = request.getServletPath();
+        String relative = path.split("lala/")[1];
+
+        LOG.debug("path={}", relative);
+        return relative;
     }
 }
