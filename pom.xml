@@ -227,40 +227,6 @@
                     </httpConnector>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.5.3.201107060350</version>
-                <executions>
-                    <execution>
-                        <id>JaCoCo Agent</id>
-                        <phase>test-compile</phase>
-                        <goals>
-                            <goal>
-                                prepare-agent
-                            </goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>JaCoCo Report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>
-                                report
-                            </goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
