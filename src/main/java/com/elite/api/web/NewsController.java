@@ -37,7 +37,6 @@ public class NewsController {
         String path = request.getServletPath();
         String relative = path.split("lala/")[1];
 
-        LOG.debug("path={}", relative);
         return relative;
     }
 }
