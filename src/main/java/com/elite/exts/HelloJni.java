@@ -1,15 +1,10 @@
-package com.elite.jni;
+package com.elite.exts;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * Created by wjc133
- * Date: 2016/6/21
- * Time: 19:42
- */
 public class HelloJni {
     private static final HelloJni HELLO_JNI = new HelloJni();
     static {
