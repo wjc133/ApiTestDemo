@@ -15,6 +15,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>spring-boot-test</module>
+        <module>spring-web-test</module>
+        <module>jdk-test</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -229,6 +231,43 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk16 -->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk16</artifactId>
+            <version>1.46</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-api -->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-api</artifactId>
+            <version>2.7.13</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.minidev/json-smart -->
+        <dependency>
+            <groupId>net.minidev</groupId>
+            <artifactId>json-smart</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.thetransactioncompany/jsonrpc2-base -->
+        <dependency>
+            <groupId>com.thetransactioncompany</groupId>
+            <artifactId>jsonrpc2-base</artifactId>
+            <version>1.35</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.thetransactioncompany/jsonrpc2-client -->
+        <dependency>
+            <groupId>com.thetransactioncompany</groupId>
+            <artifactId>jsonrpc2-client</artifactId>
+            <version>1.14.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -241,7 +280,7 @@
                 <version>${jetty.version}</version>
                 <configuration>
                     <reload>automatic</reload>
-                    <webAppSourceDirectory>src/main/webapp</webAppSourceDirectory>
+                    <webAppSourceDirectory>spring-web-test/src/main/webapp</webAppSourceDirectory>
                     <scanIntervalSeconds>0</scanIntervalSeconds>
                     <systemProperties>
                         <systemProperty>
@@ -261,8 +300,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>

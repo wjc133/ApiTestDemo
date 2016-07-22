@@ -28,7 +28,7 @@
     <bean id="apiTestSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="apiTestDataSource"/>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
-        <property name="mapperLocations" value="classpath*:sqlmappers/**/*Mapper.xml"/>
+        <property name="mapperLocations" value="classpath*:sqlmappers/NewsMapper.xml"/>
         <property name="typeAliasesPackage" value="com.elite.api.dao.domain"/>
     </bean>
 
