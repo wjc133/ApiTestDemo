@@ -12,9 +12,7 @@
        default-lazy-init="true">
     <bean id="propertyPlaceholderConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="ignoreResourceNotFound">
-            <value>false</value>
-        </property>
+        <property name="ignoreResourceNotFound" value="false"/>
         <property name="locations">
             <list>
                 <value>classpath:/application-apitest-web.properties</value>

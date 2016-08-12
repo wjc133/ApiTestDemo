@@ -9,22 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-web-test</artifactId>
-    <packaging>war</packaging>
+    <artifactId>spring-origin-test</artifactId>
 
-    <dependencies>
-        <!-- ... other dependency elements ... -->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>4.1.1.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>4.1.1.RELEASE</version>
-        </dependency>
-    </dependencies>
+
     <build>
         <finalName>web-api-test</finalName>
         <plugins>
@@ -46,17 +33,9 @@
                     <useTestClasspath>true</useTestClasspath>
 
                     <httpConnector>
-                        <port>8081</port>
+                        <port>8082</port>
                         <idleTimeout>60000</idleTimeout>
                     </httpConnector>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>

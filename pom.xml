@@ -17,6 +17,7 @@
         <module>spring-boot-test</module>
         <module>spring-web-test</module>
         <module>jdk-test</module>
+        <module>spring-origin-test</module>
     </modules>
 
     <packaging>pom</packaging>
