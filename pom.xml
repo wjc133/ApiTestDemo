@@ -19,6 +19,7 @@
         <module>jdk-test</module>
         <module>spring-origin-test</module>
         <module>network-test</module>
+        <module>assembly-test</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -1,0 +1,1 @@
+java -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC -Djava.ext.dirs=lib -classpath conf com.elite.assembly.Main
