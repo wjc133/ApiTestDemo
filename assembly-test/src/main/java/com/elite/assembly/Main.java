@@ -9,7 +9,7 @@ import java.io.File;
  */
 public class Main {
     public static void main(String[] args) {
-        File file = ConfigUtils.loadFiles("config.xml");
+        File file = ConfigUtils.loadFile("config.xml");
         if (file != null && file.exists()) {
             System.out.println("文件存在:" + file.getAbsolutePath());
         } else {

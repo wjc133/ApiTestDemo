@@ -20,6 +20,10 @@
         <module>spring-origin-test</module>
         <module>network-test</module>
         <module>assembly-test</module>
+        <module>spring-security-test</module>
+        <module>zookeeper-test</module>
+        <module>netty-demo</module>
+        <module>kotlin-demo</module>
     </modules>
 
     <packaging>pom</packaging>

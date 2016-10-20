@@ -14,7 +14,7 @@ import java.net.URL;
 public class ConfigUtils {
     private static final Logger logger = LoggerFactory.getLogger(ConfigUtils.class);
 
-    public static File loadFiles(String fileName) {
+    public static File loadFile(String fileName) {
         if (fileName.startsWith("/")) {
             return new File(fileName);
         }
