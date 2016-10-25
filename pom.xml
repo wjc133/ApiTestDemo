@@ -24,6 +24,7 @@
         <module>zookeeper-test</module>
         <module>netty-demo</module>
         <module>kotlin-demo</module>
+        <module>rx-demo</module>
     </modules>
 
     <packaging>pom</packaging>
